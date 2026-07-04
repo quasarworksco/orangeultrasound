@@ -527,9 +527,204 @@
       </div>
     </section>
 
-    <!-- Las siguientes secciones se agregarán en las próximas partes -->
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="section contact" id="contacto">
+      <div class="container">
+        <div class="contact__head text-center" data-animate>
+          <span class="eyebrow" data-i18n="contact.eyebrow">Estamos para ayudarle</span>
+          <h2 class="section-title" data-i18n="contact.title">Agende su cita o escríbanos</h2>
+          <p class="section-lead" data-i18n="contact.lead">Sin cita previa en la mayoría de los estudios. Con gusto le atendemos en español e inglés.</p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Información -->
+          <div class="contact__info" data-animate>
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div class="info-item__body">
+                <h3 data-i18n="contact.phoneT">Teléfono</h3>
+                <a href="tel:3213008302">321-300-8302</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div class="info-item__body">
+                <h3 data-i18n="contact.addrT">Dirección</h3>
+                <a href="https://maps.google.com/?q=7200+Lake+Ellenor+Dr+Suite+102+Orlando+FL+32809" target="_blank" rel="noopener">7200 Lake Ellenor Dr, Suite 102, Orlando, FL 32809</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </span>
+              <div class="info-item__body">
+                <h3 data-i18n="contact.emailT">Correo electrónico</h3>
+                <a href="mailto:orangeultrasoundinfo@gmail.com">orangeultrasoundinfo@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div class="info-item__body">
+                <h3 data-i18n="contact.hoursT">Horario de atención</h3>
+                <p data-i18n="contact.hoursP">Lunes a Viernes, horario a confirmar</p>
+              </div>
+            </div>
+
+            <div class="contact__socials" data-animate>
+              <a class="social-btn" href="#" aria-label="Instagram Orange Ultrasound" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a class="social-btn" href="#" aria-label="Facebook Orange Ultrasound" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a class="social-btn" href="#" aria-label="TikTok Orange Ultrasound" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.9 3.8 4.2v3.1c-1.4.1-2.7-.3-3.9-1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <div class="contact__form-wrap" data-animate>
+            <h3 data-i18n="contact.formTitle">Escríbanos</h3>
+            <p data-i18n="contact.formLead">Complete sus datos y envíelos por WhatsApp o correo. Le responderemos lo antes posible.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="cf-name" data-i18n="contact.fName">Nombre</label>
+                  <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Su nombre" />
+                </div>
+                <div class="field">
+                  <label for="cf-phone" data-i18n="contact.fPhone">Teléfono</label>
+                  <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(000) 000-0000" />
+                </div>
+                <div class="field field--full">
+                  <label for="cf-email" data-i18n="contact.fEmail">Correo electrónico</label>
+                  <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="correo@ejemplo.com" />
+                </div>
+                <div class="field field--full">
+                  <label for="cf-study" data-i18n="contact.fStudy">Estudio de interés</label>
+                  <select id="cf-study" name="study">
+                    <option value="" data-i18n="contact.fStudyPh">Seleccione un estudio (opcional)</option>
+                    <option>Obstétrico / Embarazo</option>
+                    <option>Ginecológico / Transvaginal</option>
+                    <option>Mama (Seno)</option>
+                    <option>Abdomen Completo</option>
+                    <option>Renal / Vías Urinarias</option>
+                    <option>Próstata</option>
+                    <option>Tiroides y Cuello</option>
+                    <option>Vascular / Doppler</option>
+                    <option>Ecografía 3D/4D</option>
+                    <option data-i18n="contact.fStudyOther">Otro / No estoy seguro</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="cf-message" data-i18n="contact.fMsg">Mensaje</label>
+                  <textarea id="cf-message" name="message" placeholder="Cuéntenos en qué podemos ayudarle..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn" data-action="whatsapp">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4-1.1l-.3-.2-2.8.7.8-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 6 9.6a5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c2.1.9 2.1.6 2.5.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+                  <span data-i18n="contact.sendWa">Enviar por WhatsApp</span>
+                </button>
+                <button type="submit" class="btn btn--outline" data-action="email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                  <span data-i18n="contact.sendMail">Enviar por correo</span>
+                </button>
+              </div>
+              <p class="form-note" data-i18n="contact.formNote">Al enviar se abrirá WhatsApp o su correo con el mensaje ya preparado. No compartimos sus datos.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="contact__map" data-animate>
+          <div class="contact__map-fallback" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>7200 Lake Ellenor Dr, Suite 102, Orlando, FL 32809</span>
+          </div>
+          <iframe
+            title="Ubicación de Orange Ultrasound en Orlando, FL"
+            src="https://www.google.com/maps?q=7200%20Lake%20Ellenor%20Dr%20Suite%20102%20Orlando%20FL%2032809&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
 
   </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__closing" data-animate>
+        <span data-i18n="footer.closingA">Imágenes que generan confianza,</span>
+        <span data-i18n="footer.closingB">resultados que hacen la diferencia.</span>
+      </p>
+
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="brand" href="#inicio" aria-label="Orange Ultrasound">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+                <g stroke="#1AA6A0" stroke-width="4.5" stroke-linecap="round"><path d="M18 44 a16 16 0 0 1 28 0"/><path d="M24 44 a10 10 0 0 1 16 0"/></g>
+                <circle cx="32" cy="44" r="4" fill="#3FC1C0"/>
+              </svg>
+            </span>
+            <span class="brand__text">
+              <span class="brand__top">ORANGE</span>
+              <span class="brand__bottom">ULTRASOUND</span>
+            </span>
+          </a>
+          <p data-i18n="footer.about">Ultrasonidos de calidad a precios accesibles en Orlando, FL. Cuidamos su salud como si fuera nuestra familia.</p>
+          <div class="footer__socials">
+            <a class="social-btn" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a class="social-btn" href="#" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.9 3.8 4.2v3.1c-1.4.1-2.7-.3-3.9-1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.navTitle">Navegación</h4>
+          <ul>
+            <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#atencion" data-i18n="nav.care">Atención</a></li>
+            <li><a href="#porque" data-i18n="nav.why">¿Por qué elegirnos?</a></li>
+            <li><a href="#estudios" data-i18n="nav.studies">Estudios</a></li>
+            <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.contactTitle">Contacto</h4>
+          <ul>
+            <li class="with-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:3213008302">321-300-8302</a></li>
+            <li class="with-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg><a href="mailto:orangeultrasoundinfo@gmail.com">orangeultrasoundinfo@gmail.com</a></li>
+            <li class="with-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>7200 Lake Ellenor Dr, Suite 102, Orlando, FL 32809</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Orange Ultrasound. <span data-i18n="footer.rights">Todos los derechos reservados.</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/13213008302" target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4-1.1l-.3-.2-2.8.7.8-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A3 3 0 0 0 6 9.6a5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c2.1.9 2.1.6 2.5.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
 
   <script src="assets/js/main.js" defer></script>
 </body>
