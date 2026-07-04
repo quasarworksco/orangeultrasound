@@ -130,7 +130,7 @@
     'contact.addrT': 'Address',
     'contact.emailT': 'Email',
     'contact.hoursT': 'Business hours',
-    'contact.hoursP': 'Monday to Friday, hours to be confirmed',
+    'contact.hoursP': 'Monday to Saturday, 9:00 AM – 4:00 PM',
     'contact.formTitle': 'Write to us',
     'contact.formLead': 'Fill in your details and send them via WhatsApp or email. We will get back to you as soon as possible.',
     'contact.fName': 'Name',

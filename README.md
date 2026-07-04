@@ -43,17 +43,17 @@ según el botón que se pulse.
 
 Estos elementos usan valores de ejemplo (placeholder). Reemplázalos cuando tengas la info:
 
-1. **Horario de atención** — hoy dice "Lunes a Viernes, horario a confirmar".
-   Actualízalo en `index.html` (busca `contact.hoursP`) y en `assets/js/i18n.js`.
-2. **Enlaces de redes sociales** — Instagram, Facebook y TikTok apuntan a `#`.
+1. **Enlaces de redes sociales** — Instagram, Facebook y TikTok apuntan a `#`.
    Pon las URLs reales en los `href="#"` de los botones sociales (en la sección de
    contacto y en el footer).
-3. **Fotografías** — hoy se muestran degradados de marca como respaldo. Sustituye las
+2. **Fotografías** — hoy se muestran degradados de marca como respaldo. Sustituye las
    imágenes por fotos reales de la clínica:
    - Hero: profesional realizando un ultrasonido.
    - "Atención para todos": familia multigeneracional.
    - "Tecnología": equipo de ultrasonido de alta gama.
    Cambia los `src` de las etiquetas `<img>` (idealmente sube las fotos a `assets/img/`).
-4. **Precio "desde $139"** y **"informe por radiólogo certificado"** — confirma que
+3. **Precio "desde $139"** y **"informe por radiólogo certificado"** — confirma que
    siguen vigentes.
-5. **Dominio** — actualiza `og:` y `canonical` en `<head>` cuando tengas el dominio final.
+4. **Dominio** — actualiza `og:` y `canonical` en `<head>` cuando tengas el dominio final.
+
+> Horario de atención: **Lunes a Sábado, 9:00 a.m. – 4:00 p.m.** (ya configurado).
