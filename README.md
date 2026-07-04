@@ -43,17 +43,14 @@ según el botón que se pulse.
 
 Estos elementos usan valores de ejemplo (placeholder). Reemplázalos cuando tengas la info:
 
-1. **Enlaces de redes sociales** — Instagram, Facebook y TikTok apuntan a `#`.
-   Pon las URLs reales en los `href="#"` de los botones sociales (en la sección de
-   contacto y en el footer).
-2. **Fotografías** — hoy se muestran degradados de marca como respaldo. Sustituye las
+1. **Fotografías** — hoy se muestran degradados de marca como respaldo. Sustituye las
    imágenes por fotos reales de la clínica:
    - Hero: profesional realizando un ultrasonido.
    - "Atención para todos": familia multigeneracional.
    - "Tecnología": equipo de ultrasonido de alta gama.
    Cambia los `src` de las etiquetas `<img>` (idealmente sube las fotos a `assets/img/`).
-3. **Precio "desde $139"** y **"informe por radiólogo certificado"** — confirma que
-   siguen vigentes.
-4. **Dominio** — actualiza `og:` y `canonical` en `<head>` cuando tengas el dominio final.
+2. **Dominio** — actualiza `og:` y `canonical` en `<head>` cuando tengas el dominio final.
 
-> Horario de atención: **Lunes a Sábado, 9:00 a.m. – 4:00 p.m.** (ya configurado).
+> Ya configurados: **horario** (Lunes a Sábado, 9:00 a.m. – 4:00 p.m.),
+> **redes sociales** (Instagram, Facebook, TikTok), **precio "desde $139"** e
+> **"informe por radiólogo certificado"**.
