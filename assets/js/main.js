@@ -12,15 +12,27 @@
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Splash / pantalla de carga: se retira del DOM tras la animación */
+  const splash = document.getElementById('splash');
+  if (splash) {
+    if (prefersReduced) {
+      splash.remove();
+    } else {
+      window.setTimeout(function () { splash.remove(); }, 1750);
+    }
+  }
+
   /* Animaciones de aparición al hacer scroll (progressive enhancement) */
   const animatedEls = document.querySelectorAll('[data-animate]');
   if (animatedEls.length && 'IntersectionObserver' in window && !prefersReduced) {
     document.documentElement.classList.add('anim-ready');
 
-    // Escalonado dentro de cada grupo (grids)
-    document.querySelectorAll('.cards-grid, .studies-grid, .priority__items').forEach((group) => {
+    // Escalonado dentro de cada grupo
+    document.querySelectorAll(
+      '.hero__content, .cards-grid, .studies-grid, .priority__items, .contact__info, .footer__grid, .care__features'
+    ).forEach((group) => {
       group.querySelectorAll(':scope > [data-animate]').forEach((el, i) => {
-        el.style.setProperty('--stagger', (i % 3) * 90 + 'ms');
+        el.style.setProperty('--stagger', Math.min(i, 5) * 85 + 'ms');
       });
     });
 
