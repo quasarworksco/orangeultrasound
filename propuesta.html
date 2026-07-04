@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuesta — Sitio Web Orange Ultrasound</title>
+  <meta name="description" content="Propuesta profesional del sitio web de Orange Ultrasound: diseño, funcionalidades, hosting, dominio y mantenimiento por un año completo." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#173B5E" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ===== Estilos propios de la propuesta ===== */
+    .p-hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(125deg, #0F2A45 0%, #173B5E 55%, #1f5075 100%);
+      color: #fff; text-align: center;
+      padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(6rem, 10vw, 8rem);
+    }
+    .p-hero::before {
+      content: ""; position: absolute; inset: auto -10% -35% -10%; height: 70%;
+      background: radial-gradient(60% 100% at 50% 100%, rgba(26,166,160,.30), transparent 70%);
+    }
+    .p-hero__inner { position: relative; max-width: 820px; margin: 0 auto; }
+    .p-hero .brand__logo { height: 60px; margin: 0 auto 1.8rem; filter: brightness(0) invert(1); }
+    .p-eyebrow {
+      display: inline-block; font-family: var(--font-head); font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase; font-size: .8rem;
+      color: var(--teal-light); margin-bottom: 1rem;
+    }
+    .p-hero h1 { color: #fff; font-size: clamp(2rem, 5.4vw, 3.3rem); margin-bottom: 1rem; }
+    .p-hero h1 span { color: var(--teal-light); }
+    .p-hero p { color: rgba(255,255,255,.85); font-size: clamp(1.05rem, 2.2vw, 1.25rem); max-width: 60ch; margin: 0 auto 2rem; }
+    .p-hero__price {
+      display: inline-flex; flex-direction: column; align-items: center;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius-lg); padding: 1.2rem 2.4rem; backdrop-filter: blur(6px);
+    }
+    .p-hero__price .amt { font-family: var(--font-head); font-weight: 700; font-size: clamp(2.6rem, 7vw, 3.6rem); line-height: 1; color: #fff; }
+    .p-hero__price .amt sup { font-size: .45em; top: -1.1em; color: var(--teal-light); }
+    .p-hero__price .per { color: rgba(255,255,255,.8); font-size: .95rem; margin-top: .35rem; }
+
+    .p-wave { line-height: 0; margin-top: -1px; }
+    .p-wave svg { display: block; width: 100%; height: auto; }
+
+    /* Tarjetas de explicación */
+    .explain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .explain-card {
+      background: #fff; border: 1px solid rgba(23,59,94,.08); border-radius: var(--radius-lg);
+      padding: 1.9rem 1.7rem; box-shadow: var(--shadow-sm); text-align: left;
+    }
+    .explain-card .ico {
+      width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(26,166,160,.14), rgba(63,193,192,.14)); color: var(--teal);
+      margin-bottom: 1.1rem;
+    }
+    .explain-card .ico svg { width: 30px; height: 30px; }
+    .explain-card h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .explain-card p { color: var(--gray-text); margin: 0; font-size: .98rem; }
+    .explain-card .tag { display:inline-block; margin-top:.9rem; font-size:.8rem; font-weight:600; color:var(--teal); background:rgba(26,166,160,.1); padding:.3rem .7rem; border-radius:999px; }
+
+    /* Lista de funcionalidades */
+    .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.6rem; }
+    .feat { display: flex; gap: .9rem; align-items: flex-start; }
+    .feat__check {
+      width: 30px; height: 30px; flex: none; border-radius: 50%;
+      background: var(--teal); color: #fff; display: grid; place-items: center; margin-top: 1px;
+    }
+    .feat__check svg { width: 17px; height: 17px; }
+    .feat h4 { margin: 0 0 .1rem; font-size: 1.02rem; }
+    .feat p { margin: 0; color: var(--gray-text); font-size: .92rem; }
+
+    /* Bloque de precio / incluye */
+    .pricing { position: relative; }
+    .pricing-card {
+      background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(23,59,94,.08); overflow: hidden;
+      display: grid; grid-template-columns: 1.15fr .85fr;
+    }
+    .pricing-card__main { padding: clamp(1.8rem, 4vw, 2.8rem); }
+    .pricing-card__aside {
+      background: linear-gradient(150deg, #173B5E, #1AA6A0); color: #fff;
+      padding: clamp(1.8rem, 4vw, 2.8rem); display: flex; flex-direction: column; justify-content: center; text-align: center;
+    }
+    .pricing-card__aside .amt { font-family: var(--font-head); font-weight: 700; font-size: clamp(3rem, 8vw, 4.2rem); line-height: 1; }
+    .pricing-card__aside .amt sup { font-size: .4em; top: -1.2em; }
+    .pricing-card__aside .per { opacity: .9; margin-bottom: 1.4rem; }
+    .pricing-card__aside .note { font-size: .85rem; opacity: .85; margin-top: 1.2rem; }
+    .incl-list { list-style: none; margin: 1.2rem 0 0; padding: 0; display: grid; gap: .8rem; }
+    .incl-list li { display: flex; gap: .8rem; align-items: flex-start; font-size: 1rem; }
+    .incl-list li svg { width: 22px; height: 22px; color: var(--teal); flex: none; margin-top: 1px; }
+    .incl-list strong { color: var(--navy); }
+
+    /* Pasos de pago */
+    .pay { background: linear-gradient(120deg, #0F2A45, #173B5E); color: #fff; }
+    .pay .section-title, .pay h2 { color: #fff; }
+    .pay .p-eyebrow { color: var(--teal-light); }
+    .pay__lead { color: rgba(255,255,255,.82); max-width: 60ch; margin: 0 auto 2.6rem; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-bottom: 2.4rem; }
+    .step {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius); padding: 1.6rem 1.4rem;
+    }
+    .step__n {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: #fff;
+      font-family: var(--font-head); font-weight: 700; display: grid; place-items: center; margin-bottom: 1rem;
+    }
+    .step h4 { color: #fff; margin: 0 0 .35rem; font-size: 1.1rem; }
+    .step p { color: rgba(255,255,255,.75); margin: 0; font-size: .95rem; }
+
+    .zelle-box {
+      max-width: 620px; margin: 0 auto; background: #fff; color: var(--ink);
+      border-radius: var(--radius-lg); padding: clamp(1.6rem, 4vw, 2.2rem); box-shadow: var(--shadow-lg);
+    }
+    .zelle-box h3 { display:flex; align-items:center; gap:.6rem; font-size:1.3rem; margin-bottom: 1.2rem; }
+    .zelle-badge { background:#6d1ed4; color:#fff; font-family:var(--font-head); font-weight:700; font-size:.85rem; padding:.35rem .7rem; border-radius:8px; letter-spacing:.02em; }
+    .zelle-row { display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px dashed rgba(23,59,94,.14); }
+    .zelle-row:last-child { border-bottom:none; }
+    .zelle-row .k { color: var(--gray-text); font-size:.95rem; }
+    .zelle-row .v { font-family: var(--font-head); font-weight:600; color: var(--navy); text-align:right; word-break:break-word; }
+    .zelle-note {
+      margin-top:1.3rem; background: rgba(26,166,160,.08); border-left:4px solid var(--teal);
+      border-radius:10px; padding:1rem 1.1rem; font-size:.95rem; color: var(--navy);
+    }
+
+    .p-cta { text-align:center; }
+    .p-footer { background: var(--gray-bg); text-align:center; padding: 2.2rem 0; color: var(--gray-text); font-size:.9rem; border-top:1px solid rgba(23,59,94,.08); }
+    .p-footer .brand__logo { height:44px; margin:0 auto .8rem; }
+
+    @media (max-width: 900px) {
+      .explain-grid { grid-template-columns: 1fr; }
+      .pricing-card { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .feat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="p-hero">
+    <div class="container p-hero__inner">
+      <img class="brand__logo" src="assets/img/logo.png" alt="Orange Ultrasound" />
+      <span class="p-eyebrow">Propuesta de sitio web</span>
+      <h1>Su clínica, con una <span>presencia digital profesional</span></h1>
+      <p>Un sitio web moderno, rápido y bilingüe, diseñado a la medida de Orange Ultrasound — pensado para atraer más pacientes y transmitir confianza desde el primer clic.</p>
+      <div class="p-hero__price">
+        <span class="amt"><sup>$</sup>209</span>
+        <span class="per">Todo incluido · 1 año completo</span>
+      </div>
+    </div>
+  </header>
+  <div class="p-wave">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#173B5E" d="M0,40 C240,90 480,90 720,55 C960,20 1200,20 1440,55 L1440,0 L0,0 Z" transform="translate(0,0)"></path></svg>
+  </div>
+
+  <!-- ===== RESUMEN / FUNCIONALIDADES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width:760px;margin:0 auto 2.6rem;">
+        <span class="eyebrow">Lo que incluye su sitio</span>
+        <h2 class="section-title">Un sitio completo, listo para trabajar por usted</h2>
+        <p class="section-lead" style="margin-inline:auto;">Cada detalle fue construido para que sus pacientes le encuentren fácil, le contacten al instante y confíen en su clínica.</p>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Diseño responsivo (mobile-first)</h4><p>Se ve perfecto en celular, tablet y computadora.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Bilingüe español / inglés</h4><p>Cambio de idioma con un solo botón.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Botón flotante de WhatsApp</h4><p>Los pacientes le escriben en un toque.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Formulario de contacto</h4><p>Envía la solicitud por WhatsApp o correo automáticamente.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Botones de llamada directa</h4><p>Toca el número y llama de inmediato.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Catálogo de estudios</h4><p>Todos sus servicios organizados por categoría.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Mapa de ubicación</h4><p>Google Maps integrado con su dirección.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Redes sociales</h4><p>Enlaces a Instagram, Facebook y TikTok.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Optimización SEO para Google</h4><p>Mejor posicionamiento y vista previa al compartir el enlace.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Pantalla de carga con su logo</h4><p>Una primera impresión profesional y de marca.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Animaciones suaves</h4><p>Una experiencia moderna y agradable al desplazarse.</p></div></div>
+        <div class="feat"><span class="feat__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Carga rápida y segura</h4><p>Optimizado para abrir en segundos.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPLICACIÓN: DOMINIO / HOSTING / MANTENIMIENTO ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center" style="max-width:760px;margin:0 auto 2.6rem;">
+        <span class="eyebrow">Todo incluido por 1 año</span>
+        <h2 class="section-title">¿Qué significa cada cosa?</h2>
+        <p class="section-lead" style="margin-inline:auto;">Para que tenga total claridad, aquí le explicamos en palabras simples qué está incluido en su inversión.</p>
+      </div>
+
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+          <h3>El dominio</h3>
+          <p>Es la <strong>dirección de su sitio en internet</strong> — lo que las personas escriben para encontrarle (por ejemplo <em>orangeultrasound.com</em>). Es su nombre digital, único y exclusivo.</p>
+          <span class="tag">Incluido 1 año</span>
+        </div>
+        <div class="explain-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/><path d="M6 8h.01M6 17h.01"/></svg></span>
+          <h3>El hosting</h3>
+          <p>Es el <strong>espacio en un servidor donde “vive” su sitio</strong>, funcionando 24/7. Gracias al hosting, su página está siempre disponible para que cualquier paciente la visite en cualquier momento.</p>
+          <span class="tag">Incluido 1 año</span>
+        </div>
+        <div class="explain-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a1.4 1.4 0 0 0 2 2l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z"/></svg></span>
+          <h3>El mantenimiento</h3>
+          <p>Es el <strong>cuidado continuo de su sitio</strong>: cambios de contenido (horarios, precios, fotos, nuevos estudios), actualizaciones de seguridad, correcciones y soporte para que todo funcione perfecto durante todo el año.</p>
+          <span class="tag">Incluido 1 año</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRECIO / INCLUYE ===== -->
+  <section class="section pricing">
+    <div class="container">
+      <div class="text-center" style="max-width:720px;margin:0 auto 2.4rem;">
+        <span class="eyebrow">Su inversión</span>
+        <h2 class="section-title">Una sola inversión, todo resuelto</h2>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-card__main">
+          <h3 style="font-size:1.4rem;margin-bottom:.3rem;">Sitio Web Profesional — Orange Ultrasound</h3>
+          <p style="color:var(--gray-text);margin-bottom:.4rem;">Paquete completo, sin costos ocultos ni mensualidades durante el primer año.</p>
+          <ul class="incl-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Diseño y desarrollo</strong> completo del sitio web (todas las funcionalidades).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Dominio</strong> incluido por 1 año.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Hosting</strong> incluido por 1 año (sitio disponible 24/7).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Mantenimiento y soporte</strong> por 1 año (cambios y actualizaciones).</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Sitio <strong>bilingüe</strong>, optimizado para <strong>Google</strong> y para <strong>celular</strong>.</span></li>
+          </ul>
+        </div>
+        <div class="pricing-card__aside">
+          <span style="opacity:.9;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;">Precio total</span>
+          <div class="amt"><sup>$</sup>209</div>
+          <div class="per">por 1 año completo</div>
+          <a class="btn btn--light" href="#pago">Ver cómo pagar</a>
+          <div class="note">Pago único. Sin sorpresas durante el primer año.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGO ===== -->
+  <section class="section pay" id="pago">
+    <div class="container">
+      <div class="text-center" style="max-width:760px;margin:0 auto;">
+        <span class="p-eyebrow">Forma de pago</span>
+        <h2 class="section-title">Cómo reservar su sitio</h2>
+        <p class="pay__lead">El proceso es rápido y seguro. Siga estos 3 pasos y su sitio quedará reservado y activo.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__n">1</div>
+          <h4>Realice el pago por Zelle</h4>
+          <p>Envíe <strong>$209</strong> por Zelle a los datos indicados abajo.</p>
+        </div>
+        <div class="step">
+          <div class="step__n">2</div>
+          <h4>Capture el comprobante</h4>
+          <p>Tome una captura de pantalla del pago realizado, donde se vea el <strong>titular</strong> de la cuenta.</p>
+        </div>
+        <div class="step">
+          <div class="step__n">3</div>
+          <h4>Envíe el comprobante</h4>
+          <p>Envíe el capture junto con el nombre del titular al <strong>gestor encargado</strong> de la propuesta para confirmar.</p>
+        </div>
+      </div>
+
+      <div class="zelle-box">
+        <h3><span class="zelle-badge">Zelle</span> Datos para el pago</h3>
+        <div class="zelle-row"><span class="k">Correo Zelle</span><span class="v">Joserchv06@gmail.com</span></div>
+        <div class="zelle-row"><span class="k">Titular</span><span class="v">Jose Chirinos</span></div>
+        <div class="zelle-row"><span class="k">Monto</span><span class="v">$209 USD</span></div>
+        <div class="zelle-row"><span class="k">Concepto</span><span class="v">Sitio web Orange Ultrasound</span></div>
+        <div class="zelle-note">
+          <strong>Importante:</strong> luego de pagar, envíe el <strong>capture (captura de pantalla) del pago</strong> mostrando el <strong>nombre del titular</strong> al gestor encargado de la propuesta. Así confirmamos su pago y activamos el proyecto.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="section p-cta">
+    <div class="container" style="max-width:720px;">
+      <span class="eyebrow">¿Listo para empezar?</span>
+      <h2 class="section-title">Lleve su clínica al siguiente nivel</h2>
+      <p class="section-lead" style="margin:0 auto 2rem;">Con una sola inversión tendrá un sitio profesional, siempre disponible y cuidado durante todo el año. Nosotros nos encargamos de todo.</p>
+      <a class="btn" href="#pago">Reservar mi sitio por $209</a>
+    </div>
+  </section>
+
+  <footer class="p-footer">
+    <div class="container">
+      <img class="brand__logo" src="assets/img/logo.png" alt="Orange Ultrasound" />
+      <p>Propuesta de sitio web para Orange Ultrasound · Orlando, FL<br />
+      Pago por Zelle: <strong>Joserchv06@gmail.com</strong> — Jose Chirinos</p>
+    </div>
+  </footer>
+
+</body>
+</html>
