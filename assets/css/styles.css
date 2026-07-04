@@ -94,7 +94,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); overflow-x: hidden; width: 100%; }
 
 body {
   margin: 0;
@@ -307,11 +307,16 @@ a { color: var(--teal); text-decoration: none; }
 .hero {
   position: relative;
   padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 4.5rem));
-  padding-bottom: clamp(4rem, 9vw, 7rem);
+  padding-bottom: clamp(5rem, 11vw, 8.5rem);
   background:
     radial-gradient(1200px 600px at 80% -10%, rgba(63, 193, 192, 0.18), transparent 60%),
     linear-gradient(180deg, #f6fafb 0%, #ffffff 100%);
   overflow: hidden;
+}
+/* La ola se ancla al fondo del hero, pegada a la siguiente sección (sin hueco) */
+.hero .wave-divider {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
 }
 
 .hero__grid {
@@ -535,7 +540,7 @@ a { color: var(--teal); text-decoration: none; }
 /* ============================================================
    Sección: Tecnología que marca la diferencia
    ============================================================ */
-.tech { background: var(--gray-bg); }
+.tech { background: var(--gray-bg); position: relative; overflow: hidden; }
 .tech__grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -892,6 +897,7 @@ a { color: var(--teal); text-decoration: none; }
 
   .care__grid { grid-template-columns: 1fr; }
   .care__media { max-width: 520px; margin-inline: auto; width: 100%; order: -1; }
+  .care__media::after { display: none; }
 
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .icon-card--wide { flex-direction: column; text-align: center; }
