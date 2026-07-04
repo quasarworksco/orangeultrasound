@@ -762,6 +762,30 @@ a { color: var(--teal); text-decoration: none; }
 .wave-divider svg { display: block; width: 100%; height: auto; }
 
 /* ============================================================
+   Animaciones al hacer scroll (fade-in)
+   Sólo se ocultan si JS está activo (.anim-ready en <html>),
+   así el contenido siempre es visible sin JavaScript.
+   ============================================================ */
+.anim-ready [data-animate] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  will-change: opacity, transform;
+}
+.anim-ready [data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* Escalonado suave dentro de grids */
+.anim-ready .cards-grid > [data-animate].is-visible,
+.anim-ready .studies-grid > [data-animate].is-visible,
+.anim-ready .priority__items > [data-animate].is-visible { transition-delay: var(--stagger, 0ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-ready [data-animate] { opacity: 1; transform: none; transition: none; }
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 900px) {

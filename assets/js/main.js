@@ -10,6 +10,32 @@
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
 
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Animaciones de aparición al hacer scroll (progressive enhancement) */
+  const animatedEls = document.querySelectorAll('[data-animate]');
+  if (animatedEls.length && 'IntersectionObserver' in window && !prefersReduced) {
+    document.documentElement.classList.add('anim-ready');
+
+    // Escalonado dentro de cada grupo (grids)
+    document.querySelectorAll('.cards-grid, .studies-grid, .priority__items').forEach((group) => {
+      group.querySelectorAll(':scope > [data-animate]').forEach((el, i) => {
+        el.style.setProperty('--stagger', (i % 3) * 90 + 'ms');
+      });
+    });
+
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    animatedEls.forEach((el) => io.observe(el));
+  }
+
   /* Sombra del header al hacer scroll */
   const onScroll = () => {
     if (!header) return;
