@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planes de Redes Sociales — Orange Ultrasound</title>
+  <meta name="description" content="Planes de crecimiento en redes sociales para Orange Ultrasound: seguidores reales en Instagram, Facebook y TikTok, flyers profesionales y reestructuración de biografía." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#173B5E" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ===== Hero ===== */
+    .p-hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(125deg, #0F2A45 0%, #173B5E 55%, #1f5075 100%);
+      color: #fff; text-align: center;
+      padding: clamp(3.5rem, 8vw, 5.5rem) 0 clamp(5rem, 9vw, 7rem);
+    }
+    .p-hero::before {
+      content: ""; position: absolute; inset: auto -10% -35% -10%; height: 70%;
+      background: radial-gradient(60% 100% at 50% 100%, rgba(26,166,160,.30), transparent 70%);
+    }
+    .p-hero__inner { position: relative; max-width: 860px; margin: 0 auto; }
+    .p-hero .brand__logo { height: 58px; margin: 0 auto 1.6rem; filter: brightness(0) invert(1); }
+    .p-eyebrow {
+      display: inline-block; font-family: var(--font-head); font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase; font-size: .8rem;
+      color: var(--teal-light); margin-bottom: 1rem;
+    }
+    .p-hero h1 { color: #fff; font-size: clamp(2rem, 5.2vw, 3.1rem); margin-bottom: 1rem; }
+    .p-hero h1 span { color: var(--teal-light); }
+    .p-hero p { color: rgba(255,255,255,.85); font-size: clamp(1.05rem, 2.2vw, 1.22rem); max-width: 62ch; margin: 0 auto; }
+    .p-wave { line-height: 0; margin-top: -1px; }
+    .p-wave svg { display: block; width: 100%; height: auto; }
+
+    /* ===== Planes ===== */
+    .plans-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; align-items: stretch;
+    }
+    .plan-card {
+      position: relative; display: flex; flex-direction: column;
+      background: #fff; border: 1px solid rgba(23,59,94,.1);
+      border-radius: var(--radius-lg); padding: 2rem 1.7rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .plan-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .plan-card--featured {
+      border: 2px solid var(--teal);
+      box-shadow: var(--shadow-lg);
+    }
+    .plan-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--teal), var(--teal-light)); color: #fff;
+      font-family: var(--font-head); font-weight: 600; font-size: .78rem; letter-spacing: .04em;
+      padding: .4rem 1rem; border-radius: 999px; white-space: nowrap;
+      box-shadow: 0 8px 18px rgba(26,166,160,.35);
+    }
+    .plan-card__name { font-size: 1.4rem; margin-bottom: .25rem; }
+    .plan-card__tag { color: var(--gray-text); font-size: .92rem; margin-bottom: 1.2rem; min-height: 2.6em; }
+    .plan-card__price { display: flex; align-items: flex-end; gap: .3rem; margin-bottom: .3rem; }
+    .plan-card__price .amt { font-family: var(--font-head); font-weight: 700; font-size: 3rem; line-height: 1; color: var(--navy); }
+    .plan-card__price .amt sup { font-size: .4em; top: -1.3em; color: var(--teal); }
+    .plan-card__price .per { color: var(--gray-text); font-size: .9rem; padding-bottom: .35rem; }
+    .plan-card__total { font-size: .85rem; color: var(--teal); font-weight: 600; margin-bottom: 1.3rem; }
+
+    .plan-followers {
+      background: var(--gray-bg); border-radius: 14px; padding: 1rem 1.1rem; margin-bottom: 1.3rem;
+    }
+    .plan-followers .lbl { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-text); font-weight: 600; margin-bottom: .7rem; }
+    .plan-net { display: flex; align-items: center; justify-content: space-between; padding: .35rem 0; }
+    .plan-net__name { display: flex; align-items: center; gap: .55rem; font-size: .95rem; color: var(--navy); font-weight: 500; }
+    .plan-net__name svg { width: 20px; height: 20px; color: var(--teal); }
+    .plan-net__n { font-family: var(--font-head); font-weight: 700; color: var(--navy); }
+
+    .plan-feats { list-style: none; margin: 0 0 1.6rem; padding: 0; display: grid; gap: .7rem; }
+    .plan-feats li { display: flex; gap: .65rem; align-items: flex-start; font-size: .96rem; color: var(--ink); }
+    .plan-feats li svg { width: 20px; height: 20px; color: var(--teal); flex: none; margin-top: 2px; }
+    .plan-feats .bonus { color: var(--teal); font-weight: 600; }
+
+    .plan-card__cta { margin-top: auto; }
+    .plan-card__cta .btn { width: 100%; justify-content: center; }
+
+    /* ===== Incluye / explicación ===== */
+    .inc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .inc-card {
+      background: #fff; border: 1px solid rgba(23,59,94,.08); border-radius: var(--radius-lg);
+      padding: 1.9rem 1.7rem; box-shadow: var(--shadow-sm);
+    }
+    .inc-card .ico {
+      width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(26,166,160,.14), rgba(63,193,192,.14)); color: var(--teal);
+      margin-bottom: 1.1rem;
+    }
+    .inc-card .ico svg { width: 30px; height: 30px; }
+    .inc-card h3 { font-size: 1.2rem; margin-bottom: .5rem; }
+    .inc-card p { color: var(--gray-text); margin: 0; font-size: .97rem; }
+
+    /* ===== Pago ===== */
+    .pay { background: linear-gradient(120deg, #0F2A45, #173B5E); color: #fff; }
+    .pay .section-title { color: #fff; }
+    .pay .p-eyebrow { color: var(--teal-light); }
+    .pay__lead { color: rgba(255,255,255,.82); max-width: 60ch; margin: 0 auto 2.6rem; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-bottom: 2.4rem; }
+    .step { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 1.6rem 1.4rem; }
+    .step__n { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: #fff; font-family: var(--font-head); font-weight: 700; display: grid; place-items: center; margin-bottom: 1rem; }
+    .step h4 { color: #fff; margin: 0 0 .35rem; font-size: 1.1rem; }
+    .step p { color: rgba(255,255,255,.75); margin: 0; font-size: .95rem; }
+    .zelle-box { max-width: 620px; margin: 0 auto; background: #fff; color: var(--ink); border-radius: var(--radius-lg); padding: clamp(1.6rem, 4vw, 2.2rem); box-shadow: var(--shadow-lg); }
+    .zelle-box h3 { display:flex; align-items:center; gap:.6rem; font-size:1.3rem; margin-bottom: 1.2rem; }
+    .zelle-badge { background:#6d1ed4; color:#fff; font-family:var(--font-head); font-weight:700; font-size:.85rem; padding:.35rem .7rem; border-radius:8px; }
+    .zelle-row { display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px dashed rgba(23,59,94,.14); }
+    .zelle-row:last-child { border-bottom:none; }
+    .zelle-row .k { color: var(--gray-text); font-size:.95rem; }
+    .zelle-row .v { font-family: var(--font-head); font-weight:600; color: var(--navy); text-align:right; word-break:break-word; }
+    .zelle-note { margin-top:1.3rem; background: rgba(26,166,160,.08); border-left:4px solid var(--teal); border-radius:10px; padding:1rem 1.1rem; font-size:.95rem; color: var(--navy); }
+
+    .p-footer { background: var(--gray-bg); text-align:center; padding: 2.2rem 0; color: var(--gray-text); font-size:.9rem; border-top:1px solid rgba(23,59,94,.08); }
+    .p-footer .brand__logo { height:44px; margin:0 auto .8rem; }
+
+    @media (max-width: 900px) {
+      .plans-grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
+      .plan-card--featured { order: -1; }
+      .inc-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="p-hero">
+    <div class="container p-hero__inner">
+      <img class="brand__logo" src="assets/img/logo.png" alt="Orange Ultrasound" />
+      <span class="p-eyebrow">Planes de redes sociales</span>
+      <h1>Haga crecer sus redes y <span>atraiga más pacientes</span></h1>
+      <p>Seguidores reales en Instagram, Facebook y TikTok, flyers profesionales listos para publicar y una reestructuración completa de sus biografías. Elija el plan que mejor se ajuste a sus metas.</p>
+    </div>
+  </header>
+  <div class="p-wave">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#173B5E" d="M0,40 C240,90 480,90 720,55 C960,20 1200,20 1440,55 L1440,0 L0,0 Z"></path></svg>
+  </div>
+
+  <!-- ===== PLANES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="max-width:720px;margin:0 auto 3rem;">
+        <span class="eyebrow">Elija su plan</span>
+        <h2 class="section-title">3 opciones, un mismo objetivo: crecer</h2>
+        <p class="section-lead" style="margin-inline:auto;">Todos incluyen seguidores parejos en cada red, flyers para publicar y la reestructuración de sus biografías como regalo.</p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- Plan 1 -->
+        <article class="plan-card">
+          <h3 class="plan-card__name">Impulso Inicial</h3>
+          <p class="plan-card__tag">Ideal para arrancar con una base sólida y dejar de verse "vacío".</p>
+          <div class="plan-card__price"><span class="amt"><sup>$</sup>85</span><span class="per">único</span></div>
+          <div class="plan-card__total">3.000 seguidores en total</div>
+
+          <div class="plan-followers">
+            <div class="lbl">1.000 seguidores en cada red</div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</span><span class="plan-net__n">1.000</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</span><span class="plan-net__n">1.000</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.9 3.8 4.2v3.1c-1.4.1-2.7-.3-3.9-1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg>TikTok</span><span class="plan-net__n">1.000</span></div>
+          </div>
+
+          <ul class="plan-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>1 flyer</strong> profesional para redes</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span class="bonus">🎁 Reestructuración de biografía (bonus)</span></li>
+          </ul>
+
+          <div class="plan-card__cta"><a class="btn btn--outline" href="#pago">Elegir este plan</a></div>
+        </article>
+
+        <!-- Plan 2 (destacado) -->
+        <article class="plan-card plan-card--featured">
+          <span class="plan-badge">★ Más elegido</span>
+          <h3 class="plan-card__name">Crecimiento</h3>
+          <p class="plan-card__tag">El equilibrio perfecto entre alcance y presupuesto para verse establecido.</p>
+          <div class="plan-card__price"><span class="amt"><sup>$</sup>190</span><span class="per">único</span></div>
+          <div class="plan-card__total">7.500 seguidores en total</div>
+
+          <div class="plan-followers">
+            <div class="lbl">2.500 seguidores en cada red</div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</span><span class="plan-net__n">2.500</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</span><span class="plan-net__n">2.500</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.9 3.8 4.2v3.1c-1.4.1-2.7-.3-3.9-1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg>TikTok</span><span class="plan-net__n">2.500</span></div>
+          </div>
+
+          <ul class="plan-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>2 flyers</strong> profesionales para redes</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span class="bonus">🎁 Reestructuración de biografía (bonus)</span></li>
+          </ul>
+
+          <div class="plan-card__cta"><a class="btn" href="#pago">Elegir este plan</a></div>
+        </article>
+
+        <!-- Plan 3 -->
+        <article class="plan-card">
+          <h3 class="plan-card__name">Premium</h3>
+          <p class="plan-card__tag">Máxima autoridad y credibilidad desde el primer vistazo.</p>
+          <div class="plan-card__price"><span class="amt"><sup>$</sup>275</span><span class="per">único</span></div>
+          <div class="plan-card__total">12.000 seguidores en total</div>
+
+          <div class="plan-followers">
+            <div class="lbl">4.000 seguidores en cada red</div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</span><span class="plan-net__n">4.000</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</span><span class="plan-net__n">4.000</span></div>
+            <div class="plan-net"><span class="plan-net__name"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.9 3.8 4.2v3.1c-1.4.1-2.7-.3-3.9-1v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg>TikTok</span><span class="plan-net__n">4.000</span></div>
+          </div>
+
+          <ul class="plan-feats">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>3 flyers</strong> profesionales para redes</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span class="bonus">🎁 Reestructuración de biografía (bonus)</span></li>
+          </ul>
+
+          <div class="plan-card__cta"><a class="btn btn--outline" href="#pago">Elegir este plan</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUÉ INCLUYE ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center" style="max-width:720px;margin:0 auto 2.6rem;">
+        <span class="eyebrow">Qué incluye cada plan</span>
+        <h2 class="section-title">Más que seguidores: una imagen profesional</h2>
+      </div>
+      <div class="inc-grid">
+        <div class="inc-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Seguidores en cada red</h3>
+          <p>Cantidades parejas y redondas en Instagram, Facebook y TikTok, para que sus perfiles se vean activos y confiables ante cada nuevo paciente.</p>
+        </div>
+        <div class="inc-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></span>
+          <h3>Flyers profesionales</h3>
+          <p>Diseños atractivos y listos para publicar en sus redes, con la identidad de Orange Ultrasound: promociones, estudios y mensajes que conectan.</p>
+        </div>
+        <div class="inc-card">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span>
+          <h3>Reestructuración de biografía <span style="color:var(--teal)">(bonus)</span></h3>
+          <p>Hoy sus redes se ven "planas". Optimizamos sus biografías con un gancho claro, sus servicios, datos de contacto y un llamado a la acción que convierte visitantes en pacientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGO ===== -->
+  <section class="section pay" id="pago">
+    <div class="container">
+      <div class="text-center" style="max-width:760px;margin:0 auto;">
+        <span class="p-eyebrow">Forma de pago</span>
+        <h2 class="section-title">Cómo activar su plan</h2>
+        <p class="pay__lead">Elija su plan y actívelo en 3 pasos rápidos y seguros.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><div class="step__n">1</div><h4>Realice el pago por Zelle</h4><p>Envíe el monto de su plan elegido ($85, $190 o $275) por Zelle a los datos de abajo.</p></div>
+        <div class="step"><div class="step__n">2</div><h4>Capture el comprobante</h4><p>Tome una captura de pantalla del pago, donde se vea el <strong>titular</strong> de la cuenta.</p></div>
+        <div class="step"><div class="step__n">3</div><h4>Envíe el comprobante</h4><p>Envíe el capture junto con el nombre del titular al <strong>gestor encargado</strong> para confirmar y comenzar.</p></div>
+      </div>
+
+      <div class="zelle-box">
+        <h3><span class="zelle-badge">Zelle</span> Datos para el pago</h3>
+        <div class="zelle-row"><span class="k">Correo Zelle</span><span class="v">Joserchv06@gmail.com</span></div>
+        <div class="zelle-row"><span class="k">Titular</span><span class="v">Jose Chirinos</span></div>
+        <div class="zelle-row"><span class="k">Monto</span><span class="v">Según el plan elegido</span></div>
+        <div class="zelle-note"><strong>Importante:</strong> luego de pagar, envíe el <strong>capture (captura de pantalla) del pago</strong> mostrando el <strong>nombre del titular</strong> al gestor encargado de la propuesta. Así confirmamos su pago y comenzamos a trabajar.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="p-footer">
+    <div class="container">
+      <img class="brand__logo" src="assets/img/logo.png" alt="Orange Ultrasound" />
+      <p>Planes de redes sociales para Orange Ultrasound · Orlando, FL<br />
+      Pago por Zelle: <strong>Joserchv06@gmail.com</strong> — Jose Chirinos</p>
+    </div>
+  </footer>
+
+</body>
+</html>
