@@ -852,6 +852,9 @@ a { color: var(--teal); text-decoration: none; }
   text-align: center; padding: 1.5rem 0;
   font-size: .85rem; color: var(--gray-text);
 }
+.footer__credit { display: block; margin-top: .4rem; }
+.footer__credit a { color: var(--teal); font-weight: 600; }
+.footer__credit a:hover { text-decoration: underline; }
 
 /* ---------- Separador de olas ---------- */
 .wave-divider { display: block; width: 100%; line-height: 0; }
